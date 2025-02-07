@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout-->
+<!--    android:weightSum="10"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="2"-->
+<!--        android:textSize="40sp"-->
+<!--        android:background="#E91E63"-->
+<!--        android:text="Android"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="3"-->
+<!--        android:textSize="40sp"-->
+<!--        android:background="#FFEB3B"-->
+<!--        android:text="PHP"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="4"-->
+<!--        android:textSize="40sp"-->
+<!--        android:background="#4CAF50"-->
+<!--        android:text="SQL"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:textSize="40sp"-->
+<!--        android:background="#03A9F4"-->
+<!--        android:text="PYTHON"-->
+<!--        />-->
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+<!--    android:weightSum="3"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <LinearLayout-->
+<!--        android:weightSum="2"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1">-->
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height=""-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="1"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+<!--</LinearLayout>-->
+
+
+
+<!--Q1_EDUNEXT-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Min Value"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Max Value"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generate Random"
+        android:onClick="generateRandom" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Result: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
