@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_number1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/et_number2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btn_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Sum" />
+
+    <Button
+        android:id="@+id/btn_difference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Difference" />
+
+    <Button
+        android:id="@+id/btn_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Product" />
+
+    <Button
+        android:id="@+id/btn_quotient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Quotient" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Result: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
