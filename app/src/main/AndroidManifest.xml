@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Prm392_my_app"
         tools:targetApi="31">
         <activity
+            android:name=".Lab3TraiCayEdit"
+            android:exported="false" />
+        <activity
             android:name=".Lab3TraiCay"
             android:exported="true">
             <intent-filter>
@@ -24,11 +27,13 @@
         <activity
             android:name=".Lab3ListView"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".Lab2SignUp"

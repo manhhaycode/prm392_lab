@@ -1,6 +1,8 @@
 package com.example.prm392_my_app;
 
-public class TraiCay {
+import java.io.Serializable;
+
+public class TraiCay implements Serializable {
     private String Ten;
     private String Mota;
     private int Hinh;

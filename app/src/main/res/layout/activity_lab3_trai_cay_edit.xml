@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title Input -->
+    <EditText
+        android:id="@+id/editTextTen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Title"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Description Input -->
+    <EditText
+        android:id="@+id/editTextMota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Description"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Image Placeholder -->
+    <ImageView
+        android:id="@+id/imageViewDetail"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Update Button -->
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Delete Button -->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:background="#FF0000"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
