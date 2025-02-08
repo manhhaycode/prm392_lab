@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In Form"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/usernameSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/passwordSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Not Account Yet -->
+    <TextView
+        android:id="@+id/notAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not Account Yet ? Create one"
+        android:textColor="#6200EE"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:background="#6200EE"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
