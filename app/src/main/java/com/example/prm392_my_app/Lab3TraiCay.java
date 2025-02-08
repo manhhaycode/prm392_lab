@@ -2,6 +2,7 @@ package com.example.prm392_my_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,7 +19,9 @@ public class Lab3TraiCay extends AppCompatActivity {
     ListView lvTraiCay;
     ArrayList<TraiCay> arrayTraiCay;
     TraiCayAdapter adapter;
+    Button buttonAdd;
     private static final int REQUEST_CODE_DETAIL = 1;
+    private static final int REQUEST_CODE_ADD = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +30,7 @@ public class Lab3TraiCay extends AppCompatActivity {
 
         // Initialize views
         lvTraiCay = findViewById(R.id.listViewTraiCay);
+        buttonAdd = findViewById(R.id.buttonAdd);
         arrayTraiCay = new ArrayList<>();
 
         // Add sample data
@@ -37,11 +41,20 @@ public class Lab3TraiCay extends AppCompatActivity {
         adapter = new TraiCayAdapter(this, R.layout.fruit_layout, arrayTraiCay);
         lvTraiCay.setAdapter(adapter);
         // Item click listener
+        // Navigate to DetailActivity for editing
         lvTraiCay.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = new Intent(this, Lab3TraiCayEdit.class);
+            intent.putExtra("isNewItem", false); // Not a new item
             intent.putExtra("position", position);
             intent.putExtra("item", arrayTraiCay.get(position));
             startActivityForResult(intent, REQUEST_CODE_DETAIL);
+        });
+
+        // Navigate to DetailActivity for creating a new item
+        buttonAdd.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Lab3TraiCayEdit.class);
+            intent.putExtra("isNewItem", true); // New item
+            startActivityForResult(intent, REQUEST_CODE_ADD);
         });
     }
 
@@ -68,6 +81,17 @@ public class Lab3TraiCay extends AppCompatActivity {
                     arrayTraiCay.remove(position);
                     adapter.notifyDataSetChanged();
                     Toast.makeText(this, "Item deleted successfully", Toast.LENGTH_SHORT).show();
+                }
+            }
+        } else if (requestCode == REQUEST_CODE_ADD) {
+            if (resultCode == RESULT_OK && data != null) {
+                // Add new item
+                TraiCay newItem = (TraiCay) data.getSerializableExtra("item");
+
+                if (newItem != null) {
+                    arrayTraiCay.add(newItem);
+                    adapter.notifyDataSetChanged();
+                    Toast.makeText(this, "Item added successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         }
