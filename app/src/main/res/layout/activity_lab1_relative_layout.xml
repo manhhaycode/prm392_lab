@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- Sign In Form Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In Form"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Username Input -->
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:background="@android:drawable/editbox_background"
+        android:padding="10dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@android:drawable/editbox_background"
+        android:padding="10dp"
+        android:layout_below="@id/username"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Sign Up Prompt -->
+    <TextView
+        android:id="@+id/signup_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Not account yet? Create one"
+        android:textSize="14sp"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- OR Separator -->
+    <View
+        android:id="@+id/or_separator"
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:background="#999999"
+        android:layout_below="@id/signup_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textSize="14sp"
+        android:layout_below="@id/signup_prompt"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:layout_marginTop="5dp"/>
+
+    <!-- Sign In Button -->
+    <Button
+        android:id="@+id/signin_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN IN"
+        android:background="#D3D3D3"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/or_text"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
